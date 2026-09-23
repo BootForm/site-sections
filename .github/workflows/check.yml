@@ -1,0 +1,23 @@
+name: Check generated pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The gallery pages are generated from sections/ and sections.json. If this fails, run
+      # `node build.mjs` locally and commit the regenerated pages.
+      - run: node build.mjs
+      - run: git diff --exit-code -- '*.html'
+      # A blank line inside a snippet ends its HTML block once it's pasted into markdown.
+      - name: No blank lines inside snippets
+        run: |
+          if grep -rnE '^\s*$' sections; then echo "Blank line inside a snippet (see AGENTS.md)"; exit 1; fi

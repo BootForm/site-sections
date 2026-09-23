@@ -1,0 +1,83 @@
+{
+  "description": "Copy-paste Tailwind CSS page sections: heroes, features, how it works, testimonials, pricing, FAQ, calls to action, footers and content grids. Live previews at desktop, tablet and phone widths.",
+  "intro": "Heroes, feature grids, testimonials, pricing, FAQs, footers. Each one renders live next to its code, at desktop, tablet or phone width, in light or dark mode.",
+  "beforeYouPaste": "<ul class=\"mt-3 list-disc space-y-2 pl-5 text-black/70 dark:text-white/70\"><li><b>Tailwind CSS v4.</b> Every snippet uses Tailwind v4 syntax, including the trailing <code>!</code> (important) on some classes. Your site needs Tailwind v4 set up, which every <a class=\"underline\" href=\"https://github.com/BootForm\">BootForm template</a> already has.</li><li><b>Your brand colour.</b> Snippets use <code>brand-50</code>, <code>brand-500</code> and <code>brand-600</code>. Define those three in your <code>@theme</code> block, or find and replace <code>brand</code> with a Tailwind colour such as <code>indigo</code>.</li><li><b>Why some classes end in <code>!</code>.</b> Pasted into a VitePress page, VitePress's own styles for headings, paragraphs, links, lists and tables beat plain Tailwind classes. The <code>!</code> goes exactly on the classes that would otherwise lose. Outside VitePress it does no harm.</li><li><b>Links and images.</b> Links point at <code>#</code> and images come from <a class=\"underline\" href=\"https://picsum.photos\">Picsum Photos</a>. Swap both for your own. On a VitePress site served from a subpath (GitHub Pages), write an internal link as <code>:href=\"withBase('/contact')\"</code>, not <code>href=\"/contact\"</code>.</li><li><b>Forms.</b> The two sections with a form post to <code>https://f.bootform.com/__YOUR_FORM_ID__</code>. Generate your own form ID at <a class=\"underline\" href=\"https://bootform.com/uuidgenerator\">bootform.com/uuidgenerator</a> and claim it before the page goes live, or point <code>action</code> at any other backend.</li><li><b>Using Claude Code?</b> The <code>add-section</code> skill in <a class=\"underline\" href=\"https://github.com/BootForm/site-skills\">BootForm/site-skills</a> pastes any of these into your page and adapts it for you.</li></ul>",
+  "categories": [
+    {
+      "id": "heroes",
+      "title": "Heroes",
+      "description": "The first thing on the page. Every hero here stacks its buttons full-width on a phone and puts them side by side from 640px up.",
+      "sections": [
+        { "id": "centered", "title": "Centered", "description": "Headline, one line of supporting text, two buttons. The safe default when you don't have a strong image." },
+        { "id": "split-image", "title": "Split with image", "description": "Text on the left, a photo on the right, stacked with the text first on a phone." },
+        { "id": "backdrop", "title": "Photo backdrop", "description": "A full-width photo behind the text, with a dark overlay so white text stays readable on any picture. Grows with its content instead of clipping it.", "notes": ["The overlay (<code>bg-black/55</code>) is what makes the text readable. On a very bright photo, raise it to <code>bg-black/65</code>."] },
+        { "id": "with-form", "title": "With a form", "description": "The pitch on the left and a short quote-request form on the right. For a local business whose whole goal is one enquiry.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>_honeypot</code> input: spam filtering depends on it being submitted empty."] },
+        { "id": "announcement", "title": "Announcement and screenshot", "description": "A small badge linking to news, a centered headline, and a product screenshot in a browser frame underneath." }
+      ]
+    },
+    {
+      "id": "features",
+      "title": "Features",
+      "description": "What you do or what the product does. Five layouts, from a plain icon grid to tabs that work with no JavaScript.",
+      "sections": [
+        { "id": "icon-grid", "title": "Icon grid", "description": "Six short features in a grid: one column on a phone, two on a tablet, three on a desktop." },
+        { "id": "alternating", "title": "Alternating image and text", "description": "Two or three bigger features, each with its own image, alternating sides on a desktop and always image-first on a phone." },
+        { "id": "tabbed", "title": "Tabs", "description": "One feature at a time, switched by tabs. Pure CSS: hidden radio buttons and Tailwind's <code>has-[]</code> variants, so it works in plain HTML and inside VitePress markdown alike.", "notes": ["The radio <code>id</code>s (<code>feature-tab-1</code> and so on) must be unique on the page. If you paste this twice, rename them in the second copy, including in the <code>group-has-[#...]</code> classes."] },
+        { "id": "sticky", "title": "Sticky heading", "description": "The heading stays in view on the left while a list of features scrolls past on the right. On a phone it's a plain stacked list.", "notes": ["<code>md:top-24</code> leaves room for a 64px site header, which is VitePress's. Adjust it if your header is taller."] },
+        { "id": "bento", "title": "Bento grid", "description": "One large card and four small ones, in an uneven grid that collapses to a single column on a phone." }
+      ]
+    },
+    {
+      "id": "steps",
+      "title": "How it works",
+      "description": "Three or four steps between a visitor and what they came for.",
+      "sections": [
+        { "id": "numbered", "title": "Numbered steps", "description": "Three steps side by side, each with a big number. One column on a phone." },
+        { "id": "timeline", "title": "Timeline", "description": "Steps down a vertical line. Works at any width, and holds more text per step than the numbered version." }
+      ]
+    },
+    {
+      "id": "social-proof",
+      "title": "Social proof",
+      "description": "Why a visitor should believe you: what other people said, who uses you, and the numbers.",
+      "sections": [
+        { "id": "testimonial-cards", "title": "Testimonial cards", "description": "Three short quotes, each with a name, a role and an initials avatar, so nobody needs a headshot.", "notes": ["Use real quotes from real customers, with their permission. Made-up testimonials are worse than none."] },
+        { "id": "testimonial-banner", "title": "Quote banner", "description": "One big quote on its own. For the single testimonial that says it best." },
+        { "id": "logo-strip", "title": "Logo strip", "description": "A row of customer or partner names, greyed out so they don't compete with your own brand. The example names are made up.", "notes": ["Swap each text wordmark for the real logo (an <code>&lt;img&gt;</code> or inline SVG), and only list companies that agreed to it."] },
+        { "id": "stats", "title": "Stats row", "description": "Three or four numbers with labels. Two columns on a phone, all in a row on a desktop." }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing and FAQ",
+      "description": "What it costs, and the questions people ask before they decide.",
+      "sections": [
+        { "id": "two-tiers", "title": "Two tiers", "description": "Two plans side by side. The simplest pricing that still gives people a choice." },
+        { "id": "three-tiers", "title": "Three tiers", "description": "Three plans, with the middle one highlighted as the one most people pick. Stacked on a phone, in a row from 1024px." },
+        { "id": "comparison-table", "title": "Comparison table", "description": "Features down the side, plans across the top. Scrolls sideways on a phone instead of squashing the columns.", "notes": ["The <code>!</code> classes on the table, rows and cells are what stop VitePress's own table styles (striped rows, borders on every cell, <code>display: block</code>) from taking over."] },
+        { "id": "faq", "title": "FAQ accordion", "description": "Questions that open one at a time, built on <code>&lt;details&gt;</code>, so it works with no JavaScript and every answer is in the page for search engines.", "notes": ["The shared <code>name=\"faq\"</code> is what closes one answer when another opens. Remove it to let several stay open at once."] }
+      ]
+    },
+    {
+      "id": "cta-footers",
+      "title": "Calls to action and footers",
+      "description": "The end of the page: one last push, a newsletter signup, and the footer.",
+      "sections": [
+        { "id": "cta-band", "title": "Call-to-action band", "description": "A coloured panel with a headline and two buttons. Goes right before the footer." },
+        { "id": "newsletter", "title": "Newsletter band", "description": "An email field and a button, side by side on a desktop and stacked on a phone.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>_honeypot</code> input."] },
+        { "id": "footer-simple", "title": "Simple footer", "description": "Your name, a few links and a copyright line. Enough for most small sites." },
+        { "id": "footer-columns", "title": "Footer with columns", "description": "A short blurb plus three columns of links. Two columns on a phone.", "notes": ["On a VitePress site built from a BootForm template, the footer comes from <code>docs/.vitepress/theme/index.ts</code>, not from a page. Put the footer there, or leave the template's own one alone."] }
+      ]
+    },
+    {
+      "id": "content",
+      "title": "Content",
+      "description": "Grids of things: articles or projects, people, photos.",
+      "sections": [
+        { "id": "card-grid", "title": "Card grid", "description": "Image, title, a line of text and a link, three across on a desktop. For posts, projects or services." },
+        { "id": "team", "title": "Team", "description": "Names and roles with initials avatars. Swap an avatar for a photo when you have one." },
+        { "id": "gallery", "title": "Photo gallery", "description": "A grid of photos with one large feature image. Two columns on a phone, four on a desktop." }
+      ]
+    }
+  ]
+}
