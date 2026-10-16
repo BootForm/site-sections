@@ -53,7 +53,7 @@ anywhere else. Breaking one produces a green build and a broken page, with no er
   side by side from `sm` up.
 - **Placeholders, not real data.** Links are `#`, photos come from Picsum, people are initials
   avatars, logos are invented names. Forms post to `https://f.bootform.com/__YOUR_FORM_ID__` with
-  a hidden `_honeypot` input. Never put a real form ID in a snippet: whoever claims it first owns
+  a hidden `bform_website` input. Never put a real form ID in a snippet: whoever claims it first owns
   every submission to it.
 - **Dark mode uses the `dark:` variant on a `.dark` ancestor**, which is how VitePress toggles it.
   Small brand-coloured text uses `dark:text-brand-50` in dark mode, because `brand-500` on a
