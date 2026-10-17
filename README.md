@@ -58,7 +58,7 @@ On a VitePress site served from a subpath (GitHub Pages), an internal link writt
 The hero with a form and the newsletter band post to `https://f.bootform.com/__YOUR_FORM_ID__`.
 Generate your own form ID at [bootform.com/uuidgenerator](https://bootform.com/uuidgenerator) and
 claim it before the page goes live, or point `action` at any other form backend. Keep the hidden
-`bform_website` input.
+`honeypot` input.
 
 ## Every section is checked
 

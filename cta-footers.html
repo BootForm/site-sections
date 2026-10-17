@@ -104,7 +104,7 @@
       <code class="text-xs text-black/50 dark:text-white/50">sections/cta-footers/newsletter.html</code>
     </div>
     <p class="mt-2 max-w-3xl text-sm leading-relaxed text-black/70 dark:text-white/70">An email field and a button, side by side on a desktop and stacked on a phone.</p>
-    <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-black/60 dark:text-white/60"><li>Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>bform_website</code> input.</li></ul>
+    <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-black/60 dark:text-white/60"><li>Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>honeypot</code> input.</li></ul>
     <div class="mt-5 overflow-hidden rounded-xl border border-black/10 dark:border-white/10">
       <div class="flex items-center justify-between gap-2 border-b border-black/10 bg-white px-3 py-2 dark:border-white/10 dark:bg-white/5">
         <div class="flex gap-1" role="group" aria-label="Preview width">
@@ -131,7 +131,7 @@
     &lt;form action=&quot;https://f.bootform.com/__YOUR_FORM_ID__&quot; method=&quot;POST&quot; class=&quot;flex flex-col gap-3 sm:flex-row&quot;&gt;
       &lt;label for=&quot;newsletter-email&quot; class=&quot;sr-only&quot;&gt;Email address&lt;/label&gt;
       &lt;input id=&quot;newsletter-email&quot; name=&quot;email&quot; type=&quot;email&quot; required autocomplete=&quot;email&quot; placeholder=&quot;you@example.com&quot; class=&quot;min-w-0 flex-1 rounded-md border border-black/20! bg-white! px-4! py-3! text-base outline-none focus:border-brand-500! focus:ring-2 focus:ring-brand-500/25 dark:border-white/20! dark:bg-white/5!&quot;&gt;
-      &lt;input type=&quot;text&quot; name=&quot;bform_website&quot; style=&quot;position:absolute;left:-9999px&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;input type=&quot;text&quot; name=&quot;honeypot&quot; style=&quot;position:absolute;left:-9999px&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; aria-hidden=&quot;true&quot;&gt;
       &lt;button type=&quot;submit&quot; class=&quot;shrink-0 rounded-md bg-brand-500! px-5! py-3! text-sm font-semibold text-white hover:bg-brand-600!&quot;&gt;Subscribe&lt;/button&gt;
     &lt;/form&gt;
   &lt;/div&gt;
@@ -148,7 +148,7 @@
     &lt;form action=&quot;https://f.bootform.com/__YOUR_FORM_ID__&quot; method=&quot;POST&quot; class=&quot;flex flex-col gap-3 sm:flex-row&quot;&gt;
       &lt;label for=&quot;newsletter-email&quot; class=&quot;sr-only&quot;&gt;Email address&lt;/label&gt;
       &lt;input id=&quot;newsletter-email&quot; name=&quot;email&quot; type=&quot;email&quot; required autocomplete=&quot;email&quot; placeholder=&quot;you@example.com&quot; class=&quot;min-w-0 flex-1 rounded-md border border-black/20! bg-white! px-4! py-3! text-base outline-none focus:border-brand-500! focus:ring-2 focus:ring-brand-500/25 dark:border-white/20! dark:bg-white/5!&quot;&gt;
-      &lt;input type=&quot;text&quot; name=&quot;bform_website&quot; style=&quot;position:absolute;left:-9999px&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;input type=&quot;text&quot; name=&quot;honeypot&quot; style=&quot;position:absolute;left:-9999px&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; aria-hidden=&quot;true&quot;&gt;
       &lt;button type=&quot;submit&quot; class=&quot;shrink-0 rounded-md bg-brand-500! px-5! py-3! text-sm font-semibold text-white hover:bg-brand-600!&quot;&gt;Subscribe&lt;/button&gt;
     &lt;/form&gt;
   &lt;/div&gt;

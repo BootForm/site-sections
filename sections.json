@@ -11,7 +11,7 @@
         { "id": "centered", "title": "Centered", "description": "Headline, one line of supporting text, two buttons. The safe default when you don't have a strong image." },
         { "id": "split-image", "title": "Split with image", "description": "Text on the left, a photo on the right, stacked with the text first on a phone." },
         { "id": "backdrop", "title": "Photo backdrop", "description": "A full-width photo behind the text, with a dark overlay so white text stays readable on any picture. Grows with its content instead of clipping it.", "notes": ["The overlay (<code>bg-black/55</code>) is what makes the text readable. On a very bright photo, raise it to <code>bg-black/65</code>."] },
-        { "id": "with-form", "title": "With a form", "description": "The pitch on the left and a short quote-request form on the right. For a local business whose whole goal is one enquiry.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>bform_website</code> input: spam filtering depends on it being submitted empty."] },
+        { "id": "with-form", "title": "With a form", "description": "The pitch on the left and a short quote-request form on the right. For a local business whose whole goal is one enquiry.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>honeypot</code> input: spam filtering depends on it being submitted empty."] },
         { "id": "announcement", "title": "Announcement and screenshot", "description": "A small badge linking to news, a centered headline, and a product screenshot in a browser frame underneath." }
       ]
     },
@@ -64,7 +64,7 @@
       "description": "The end of the page: one last push, a newsletter signup, and the footer.",
       "sections": [
         { "id": "cta-band", "title": "Call-to-action band", "description": "A coloured panel with a headline and two buttons. Goes right before the footer." },
-        { "id": "newsletter", "title": "Newsletter band", "description": "An email field and a button, side by side on a desktop and stacked on a phone.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>bform_website</code> input."] },
+        { "id": "newsletter", "title": "Newsletter band", "description": "An email field and a button, side by side on a desktop and stacked on a phone.", "notes": ["Replace <code>__YOUR_FORM_ID__</code> with your own form ID. Keep the hidden <code>honeypot</code> input."] },
         { "id": "footer-simple", "title": "Simple footer", "description": "Your name, a few links and a copyright line. Enough for most small sites." },
         { "id": "footer-columns", "title": "Footer with columns", "description": "A short blurb plus three columns of links. Two columns on a phone.", "notes": ["On a VitePress site built from a BootForm template, the footer comes from <code>docs/.vitepress/theme/index.ts</code>, not from a page. Put the footer there, or leave the template's own one alone."] }
       ]
