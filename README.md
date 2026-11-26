@@ -65,6 +65,12 @@ claim it before the page goes live, or point `action` at any other form backend.
 Each one was rendered at 1280px and at a true 390px phone width, in light and dark mode, and also
 pasted into a real VitePress template's `layout: home` page and built, before it was published.
 
+## Like it?
+
+If this saved you some time, a star on this repo helps other people find it. Everything else
+BootForm publishes is at [github.com/BootForm](https://github.com/BootForm): more templates, form
+styles and page sections, all free to copy.
+
 ## License
 
 MIT. Use them on anything, commercial or not.
